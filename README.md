@@ -37,31 +37,78 @@ Para ejecutar el proyecto se necesita:
     Un navegador web actualizado.
     Conexión a internet para visualizar las fotografías externas.
     Un editor de código, como Visual Studio Code, de manera opcional.
-    4. Instalación
+    
+4. Instalación
 
-Explicar los pasos para instalar y configurar el proyecto.
+Primero se debe clonar el repositorio:
+    git clone URL_DEL_REPOSITORIO
 
-git clone URL_DEL_REPOSITORIO
-cd NOMBRE_DEL_PROYECTO
+Después, ingresar a la carpeta del proyecto:
+    cd Cambio-clim-tico
 
+Crear un entorno virtual:
+    python -m venv venv
+
+Activarlo en Windows:
+    venv\Scripts\activate
+
+En macOS o Linux:
+    source venv/bin/activate
+
+Instalar las dependencias:
+    pip install -r requirements.txt
+
+El archivo requirements.txt debe contener:
+    Flask
+    
 5. Configuración
 
-Explicar las variables de entorno, archivos .env y demás configuraciones necesarias.
+El proyecto no necesita variables de entorno, archivos .env ni conexiones con bases de datos.
+
+El logo debe guardarse en la siguiente ubicación:
+    static/images/ecohuella.svg
+
+Las imágenes de las tarjetas se obtienen desde enlaces externos de Unsplash, por lo que se necesita conexión a internet para visualizarlas.
+
+Durante el desarrollo, Flask se ejecuta con el modo de depuración activado:
+    app.run(debug=True)
+
+El modo de depuración permite ver los errores y reiniciar automáticamente el servidor cuando se modifica el código. No se recomienda activarlo al publicar una página para uso real.
+
 6. Estructura del proyecto
 
-proyecto/
-├── src/
+./
+├── static/
+|    ├── css/
+|        └── style.css
+|    └── images/
+|        └── ecohuella.svg
+├── templates/
+|   └── index.html
 ├── tests/
-├── requirements.txt
-├── .env.example
+│   └── test_main.py
 ├── main.py
+├── requirements.txt 
 └── README.md
+
+**Función de cada uno**
+
+main.py: contiene el servidor, calcula el puntaje y crea las recomendaciones.
+templates/index.html: contiene la estructura y el contenido de la página.
+static/css/style.css: contiene los colores, tamaños, espacios y diseño.
+static/images/ecohuella.svg: contiene el logo de EcoHuella.
+requirements.txt: indica las librerías que deben instalarse.
+README.md: explica el funcionamiento y la instalación del proyecto.
 
 7. Uso y ejecución
 
-Explicar cómo ejecutar el proyecto.
+Para iniciar la página se debe ejecutar:
+    python main.py
 
-python main.py
+Después, abrir en el navegador:
+    http://127.0.0.1:5000
+
+Para detener el servidor, se puede presionar **Ctrl + C** en la terminal.
 
 8. Pruebas
 
