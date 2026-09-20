@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="titulo descripcion">
+    <title id="titulo">Logo de EcoHuella</title>
+    <desc id="descripcion">Una hoja blanca dentro de un cuadrado violeta redondeado.</desc>
+
+    <defs>
+        <linearGradient id="fondo" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#9f67f4"/>
+            <stop offset="1" stop-color="#5b21b6"/>
+        </linearGradient>
+    </defs>
+
+    <rect width="64" height="64" rx="18" fill="url(#fondo)"/>
+    <path
+        d="M47.5 14.5C33.8 15.7 22.9 21 19 30.2c-2.9 6.9.2 13.6 6.7 15.6 7.7 2.4 15.5-2.7 18.5-11.1 2.5-7 2.7-13.9 3.3-20.2Z"
+        fill="none"
+        stroke="#ffffff"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+    <path
+        d="M16.5 49.5c5-9.1 11.5-15.8 21.5-21"
+        fill="none"
+        stroke="#ffffff"
+        stroke-width="4"
+        stroke-linecap="round"
+    />
+</svg>

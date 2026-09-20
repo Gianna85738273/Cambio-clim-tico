@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Evaluá tus hábitos diarios y descubrí cómo reducir tu impacto ambiental."
+    >
+
+    <title>EcoHuella | Acción climática</title>
+
+    <!-- Logo de la pestaña del navegador -->
+    <link
+        rel="icon"
+        href="{{ url_for('static', filename='images/ecohuella.svg') }}"
+        type="image/svg+xml"
+    >
+
+    <!-- Conexión con el CSS -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+</head>
+
+<body>
+
+    <!-- Barra de navegación -->
+    <header class="navegacion">
+        <nav
+            class="barra-navegacion contenedor"
+            aria-label="Navegación principal"
+        >
+
+            <!-- Marca y logo -->
+            <a
+                class="marca"
+                href="#inicio"
+                aria-label="EcoHuella, página principal"
+            >
+                <img
+                    class="logo-imagen"
+                    src="{{ url_for('static', filename='images/ecohuella.svg') }}"
+                    alt="Logo de EcoHuella"
+                >
+
+                <span>EcoHuella</span>
+            </a>
+
+            <!-- Enlaces del menú -->
+            <div class="enlaces-navegacion">
+                <a href="#problema">El problema</a>
+                <a href="#soluciones">Soluciones</a>
+                <a href="#cuestionario">Evaluación</a>
+            </div>
+
+            <a
+                class="boton boton-pequeno"
+                href="#cuestionario"
+            >
+                Medir mi impacto
+            </a>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Presentación principal -->
+        <section class="hero" id="inicio">
+            <div class="hero-contenido contenedor">
+
+                <div class="hero-texto">
+                    <span class="etiqueta">
+                        Acción climática simple
+                    </span>
+
+                    <h1>
+                        Pequeños cambios.
+                        <span>Impacto real.</span>
+                    </h1>
+
+                    <p>
+                        Conocé el impacto de tus hábitos cotidianos y
+                        recibí un plan simple para tomar decisiones
+                        más responsables.
+                    </p>
+
+                    <div class="hero-acciones">
+
+                        <a
+                            class="boton"
+                            href="#cuestionario"
+                        >
+                            Conocer mi impacto
+                        </a>
+
+                        <a
+                            class="boton boton-secundario"
+                            href="#soluciones"
+                        >
+                            Ver soluciones
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Panel derecho del inicio -->
+                <aside
+                    class="hero-panel"
+                    aria-label="Características de la evaluación"
+                >
+                    <div class="panel-superior">
+                        <span class="indicador">CO₂</span>
+
+                        <span class="estado">
+                            Evaluación personal
+                        </span>
+                    </div>
+
+                    <h2>
+                        Tu plan empieza con tres preguntas.
+                    </h2>
+
+                    <ul class="beneficios">
+                        <li>
+                            <span>01</span>
+                            Resultado inmediato
+                        </li>
+
+                        <li>
+                            <span>02</span>
+                            Recomendaciones concretas
+                        </li>
+
+                        <li>
+                            <span>03</span>
+                            Cambios posibles y medibles
+                        </li>
+                    </ul>
+                </aside>
+
+            </div>
+        </section>
+
+        <!-- Explicación del problema -->
+        <section class="seccion" id="problema">
+            <div class="contenedor bloque-informativo">
+
+                <div>
+                    <span class="sobretitulo">
+                        El problema
+                    </span>
+
+                    <h2>
+                        ¿Qué es el cambio climático?
+                    </h2>
+                </div>
+
+                <p class="texto-destacado">
+                    Es un cambio prolongado en el clima de la Tierra.
+                    Actualmente, ocurre principalmente porque ciertas
+                    actividades humanas hacen que el planeta retenga
+                    más calor del normal.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Tarjetas de soluciones -->
+        <section
+            class="seccion seccion-suave"
+            id="soluciones"
+        >
+            <div class="contenedor">
+
+                <div class="encabezado-seccion">
+                    <div>
+                        <span class="sobretitulo">
+                            Acciones cotidianas
+                        </span>
+
+                        <h2>¿Qué podemos hacer?</h2>
+                    </div>
+
+                    <p>
+                        Tres decisiones sencillas para comenzar
+                        a reducir nuestro impacto.
+                    </p>
+                </div>
+
+                <div class="tarjetas">
+
+                    <!-- Tarjeta de energía -->
+                    <details class="tarjeta">
+
+                        <summary class="tarjeta-resumen">
+                            <span class="numero-tarjeta">01</span>
+
+                            <h3>Ahorrar energía</h3>
+
+                            <p>
+                                Apagar luces y desconectar los aparatos
+                                que no utilizamos.
+                            </p>
+
+                            <span class="accion-tarjeta">
+                                Ver ejemplo
+
+                                <span
+                                    class="simbolo-tarjeta"
+                                    aria-hidden="true"
+                                >
+                                    +
+                                </span>
+                            </span>
+                        </summary>
+
+                        <figure class="tarjeta-visual">
+                            <img
+                                src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                                alt="Paneles solares bajo un cielo azul"
+                                loading="lazy"
+                            >
+
+                            <figcaption>
+                                Usar la energía de manera eficiente
+                                reduce emisiones innecesarias.
+                            </figcaption>
+                        </figure>
+
+                    </details>
+
+                    <!-- Tarjeta de transporte -->
+                    <details class="tarjeta">
+
+                        <summary class="tarjeta-resumen">
+                            <span class="numero-tarjeta">02</span>
+
+                            <h3>Transportarnos mejor</h3>
+
+                            <p>
+                                Caminar, usar bicicleta o elegir
+                                el transporte público.
+                            </p>
+
+                            <span class="accion-tarjeta">
+                                Ver ejemplo
+
+                                <span
+                                    class="simbolo-tarjeta"
+                                    aria-hidden="true"
+                                >
+                                    +
+                                </span>
+                            </span>
+                        </summary>
+
+                        <figure class="tarjeta-visual">
+                            <img
+                                src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                                alt="Una persona trasladándose en bicicleta"
+                                loading="lazy"
+                            >
+
+                            <figcaption>
+                                La bicicleta es una buena opción para
+                                realizar viajes cortos sin producir emisiones.
+                            </figcaption>
+                        </figure>
+
+                    </details>
+
+                    <!-- Tarjeta de residuos -->
+                    <details class="tarjeta">
+
+                        <summary class="tarjeta-resumen">
+                            <span class="numero-tarjeta">03</span>
+
+                            <h3>Reducir residuos</h3>
+
+                            <p>
+                                Reutilizar productos, separar residuos
+                                y evitar descartables.
+                            </p>
+
+                            <span class="accion-tarjeta">
+                                Ver ejemplo
+
+                                <span
+                                    class="simbolo-tarjeta"
+                                    aria-hidden="true"
+                                >
+                                    +
+                                </span>
+                            </span>
+                        </summary>
+
+                        <figure class="tarjeta-visual">
+                            <img
+                                src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                                alt="Contenedores para separar distintos tipos de residuos"
+                                loading="lazy"
+                            >
+
+                            <figcaption>
+                                Separar materiales permite recuperar
+                                recursos y generar menos basura.
+                            </figcaption>
+                        </figure>
+
+                    </details>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Cuestionario -->
+        <section class="seccion" id="cuestionario">
+            <div class="contenedor">
+
+                <div class="encabezado-seccion encabezado-cuestionario">
+
+                    <div>
+                        <span class="sobretitulo">
+                            Evaluación personal
+                        </span>
+
+                        <h2>Conocé tu impacto</h2>
+                    </div>
+
+                    <p>
+                        Respondé tres preguntas y obtené
+                        recomendaciones personalizadas.
+                    </p>
+
+                </div>
+
+                <div class="evaluacion">
+
+                    <!-- Información sobre el cuestionario -->
+                    <div class="evaluacion-informacion">
+
+                        <span class="paso">
+                            Paso 1 de 1
+                        </span>
+
+                        <h3>Tus hábitos diarios</h3>
+
+                        <p>
+                            Elegí la opción que mejor represente
+                            tu comportamiento habitual. No hay
+                            respuestas correctas o incorrectas.
+                        </p>
+
+                        <div class="escala">
+
+                            <div>
+                                <strong>0–2</strong>
+                                <span>Impacto bajo</span>
+                            </div>
+
+                            <div>
+                                <strong>3–4</strong>
+                                <span>Impacto medio</span>
+                            </div>
+
+                            <div>
+                                <strong>5–6</strong>
+                                <span>Impacto alto</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Formulario enviado a Python -->
+                    <form
+                        class="formulario"
+                        method="POST"
+                        action="{{ url_for('inicio') }}#resultado"
+                    >
+
+                        <!-- Pregunta sobre transporte -->
+                        <div class="campo">
+
+                            <label for="transporte">
+                                ¿Cómo te transportás normalmente?
+                            </label>
+
+                            <select
+                                name="transporte"
+                                id="transporte"
+                                required
+                            >
+                                <option
+                                    value=""
+                                    disabled
+                                    selected
+                                >
+                                    Elegí una respuesta
+                                </option>
+
+                                <option value="0">
+                                    Camino o uso bicicleta
+                                </option>
+
+                                <option value="1">
+                                    Uso transporte público
+                                </option>
+
+                                <option value="2">
+                                    Uso automóvil
+                                </option>
+                            </select>
+
+                        </div>
+
+                        <!-- Pregunta sobre energía -->
+                        <div class="campo">
+
+                            <label for="energia">
+                                ¿Apagás las luces que no utilizás?
+                            </label>
+
+                            <select
+                                name="energia"
+                                id="energia"
+                                required
+                            >
+                                <option
+                                    value=""
+                                    disabled
+                                    selected
+                                >
+                                    Elegí una respuesta
+                                </option>
+
+                                <option value="0">
+                                    Siempre
+                                </option>
+
+                                <option value="1">
+                                    A veces
+                                </option>
+
+                                <option value="2">
+                                    Casi nunca
+                                </option>
+                            </select>
+
+                        </div>
+
+                        <!-- Pregunta sobre residuos -->
+                        <div class="campo">
+
+                            <label for="residuos">
+                                ¿Separás o reutilizás tus residuos?
+                            </label>
+
+                            <select
+                                name="residuos"
+                                id="residuos"
+                                required
+                            >
+                                <option
+                                    value=""
+                                    disabled
+                                    selected
+                                >
+                                    Elegí una respuesta
+                                </option>
+
+                                <option value="0">
+                                    Siempre
+                                </option>
+
+                                <option value="1">
+                                    A veces
+                                </option>
+
+                                <option value="2">
+                                    Nunca
+                                </option>
+                            </select>
+
+                        </div>
+
+                        <button
+                            class="boton boton-formulario"
+                            type="submit"
+                        >
+                            Calcular mi impacto
+                        </button>
+
+                    </form>
+                </div>
+
+                <!-- Resultado enviado desde Python -->
+                {% if resultado %}
+
+                    <section
+                        class="resultado resultado-{{ nivel }}"
+                        id="resultado"
+                        aria-live="polite"
+                    >
+
+                        <div class="resultado-resumen">
+
+                            <div>
+                                <span class="sobretitulo">
+                                    Resultado de la evaluación
+                                </span>
+
+                                <p class="nivel">
+                                    Impacto {{ nivel }}
+                                </p>
+
+                                <h3>
+                                    {{ resultado }}
+                                </h3>
+                            </div>
+
+                            <div class="resultado-puntaje">
+                                <span>Puntaje</span>
+
+                                <strong>
+                                    {{ puntos }}
+                                    <small>/6</small>
+                                </strong>
+                            </div>
+
+                        </div>
+
+                        <p class="aclaracion">
+                            En esta evaluación, menos puntos
+                            significa menor impacto ambiental.
+                        </p>
+
+                        <div class="plan-mejora">
+                            <h4>Tu plan de mejora</h4>
+
+                            <ul class="recomendaciones">
+
+                                {% for recomendacion in recomendaciones %}
+
+                                    <li>
+                                        <span class="marca-lista">
+                                            ✓
+                                        </span>
+
+                                        <span>
+                                            {{ recomendacion }}
+                                        </span>
+                                    </li>
+
+                                {% endfor %}
+
+                            </ul>
+                        </div>
+
+                        <a
+                            class="enlace-repetir"
+                            href="#cuestionario"
+                        >
+                            Realizar la evaluación nuevamente
+                        </a>
+
+                    </section>
+
+                {% endif %}
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="pie">
+        <div class="contenedor contenido-pie">
+
+            <a
+                class="marca marca-pie"
+                href="#inicio"
+            >
+                <img
+                    class="logo-imagen"
+                    src="{{ url_for('static', filename='images/ecohuella.svg') }}"
+                    alt="Logo de EcoHuella"
+                >
+
+                <span>EcoHuella</span>
+            </a>
+
+            <p>
+                Una herramienta orientativa para comprender
+                y mejorar nuestros hábitos.
+            </p>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
