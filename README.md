@@ -20,6 +20,7 @@ El proyecto fue desarrollado usando:
     HTML5: organiza el contenido y la estructura de la página.
     CSS3: controla los colores, tamaños, espacios y diseño adaptable.
     Jinja2: permite mostrar en el HTML los resultados calculados por Python.
+    pytest: ejecuta pruebas automáticas para comprobar el funcionamiento del proyecto.
 
 Librerías utilizadas:
     Flask
@@ -97,6 +98,7 @@ main.py: contiene el servidor, calcula el puntaje y crea las recomendaciones.
 templates/index.html: contiene la estructura y el contenido de la página.
 static/css/style.css: contiene los colores, tamaños, espacios y diseño.
 static/images/ecohuella.svg: contiene el logo de EcoHuella.
+tests/test_main.py: contiene las pruebas automáticas del proyecto.
 requirements.txt: indica las librerías que deben instalarse.
 README.md: explica el funcionamiento y la instalación del proyecto.
 
@@ -112,13 +114,58 @@ Para detener el servidor, se puede presionar **Ctrl + C** en la terminal.
 
 8. Pruebas
 
-Explicar cómo ejecutar las pruebas.
+El proyecto incluye pruebas automáticas realizadas con pytest. Para ejecutarlas, se debe abrir una terminal en la carpeta donde se encuentra main.py y utilizar:
+    
+python -m pytest -v
 
-pytest
+La opción -v muestra de manera detallada el nombre y el resultado de cada prueba.
+
+Las pruebas automáticas comprueban que:
+
+- La página principal cargue correctamente.
+- El nombre EcoHuella aparezca en la página.
+- Un puntaje entre 0 y 2 produzca un impacto bajo.
+- Un puntaje entre 3 y 4 produzca un impacto medio.
+- Un puntaje entre 5 y 6 produzca un impacto alto.
+- Las recomendaciones correspondientes aparezcan correctamente.
+
+Si todas las pruebas funcionan, la terminal muestra un resultado similar a:
+
+test_pagina_principal PASSED
+test_impacto_bajo PASSED
+test_impacto_medio PASSED
+test_impacto_alto PASSED
+
+4 passed
+
+Además de las pruebas automáticas, se recomienda comprobar manualmente que:
+
+- El logo y el CSS aparezcan.
+- Las tarjetas puedan abrirse y mostrar sus imágenes.
+- El formulario obligue a responder las tres preguntas.
+- La página se adapte a computadoras y celulares.
 
 9. Contribución
 
-Explicar cómo pueden contribuir otros desarrolladores al proyecto.
+Otros desarrolladores pueden contribuir al proyecto siguiendo estos pasos:
+
+- Clonar o realizar un fork del repositorio.
+- Crear una rama para los cambios.
+- Modificar o agregar funciones.
+- Comprobar que la página siga funcionando.
+- Ejecutar las pruebas automáticas.
+- Guardar los cambios mediante un commit.
+- Crear un pull request explicando las modificaciones realizadas
+
+Algunas posibles mejoras son:
+
+- Agregar más preguntas al cuestionario.
+- Incorporar una medición más precisa del impacto.
+- Guardar resultados en una base de datos.
+- Crear gráficos para comparar resultados.
+- Agregar más recomendaciones.
+- Ampliar la cantidad de pruebas automáticas.
+
 10. Licencia
 
-Indicar la licencia utilizada por el proyecto.
+Este proyecto fue desarrollado con fines educativos y actualmente no cuenta con una licencia de código abierto específica.
